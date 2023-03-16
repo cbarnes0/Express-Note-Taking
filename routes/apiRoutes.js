@@ -1,14 +1,14 @@
-const router = require('express').Router();
+const api = require('express').Router();
 const db = require('../db/db.json');
 const fs = require('fs');
 
-router.get('/api/notes', function (req, res) {
-
-    console.log("Executing GET notes request");
-
-    let data = JSON.parse(fs.readFileSync("../db/db.json", "utf8"));
-    
-    console.log("GET request - Returning notes data: " + JSON.stringify(data));
-    
-    response.json(data);
+api.get('/notes', function (req, res) {
+    console.log(`${req.method} request received`)
+    fs.readFile('../db/db.json', (err, data) => {
+        if (err) throw err;
+        dbData = JSON.parse(data);
+        res.send(dbData);
+    });
 });
+
+module.exports = api;
