@@ -27,7 +27,7 @@ To install this code first you must clone the repository. Run ```npm i```. Then 
 
 ## Screenshots
 
-![Screenshot1](screenshots/Express_Note_Taking_AdobeExpress.gif)
+![Screenshot1](screenshots/Express%20Note%20Taking.gif)
 
 ![Screenshot2](screenshots/Screenshot%202023-03-16%20165232.png)
 
